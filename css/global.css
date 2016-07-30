@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/*全局样式*/
+
+
+/*由于不同浏览器对HTML标签的解释有差异，所以最终的网页效果在不同的浏览器中可能是不一样的，为了消除这方面的风险，一开始就把所有标签的默认属性全部去除，以达到所有签标属性值都统一的效果。*/
+
+
+/*
+浏览器兼容，根据浏览器的表现不同，用以下特殊字符适当调整。
+(1)*:  IE6+IE7都能识别*,而标准浏览器FF+IE8是不能识别*的;
+(2)!important: 除IE6不能识别 !important外,  FF+IE8+IE7都能识别!important ;
+(3)_ : 除IE6支持_ 外,  FF+IE8+IE7都不支持_;
+(4)\9:所有IE浏览器都识别(IE6、IE7、IE8、IE9)
+(5)\0:background-color:red\0;IE8和IE9都支持；background-color:blue\9\0; 仅IE9支持； 　　
+*/
+
+
+/* 初始化标签在所有浏览器中的margin、padding值及字体 */
+
+body, div, span, a, p, em, b, strong, input, button, lable, select,
+h1, h2, h3, h4, h5, h6,
+table, th, td, ul, li, ol,
+pre, code, form, fieldset, legend, textarea, blockquote {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑", "黑体", "宋体", "arial", "sans-serif";
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 12px;
+    color: #000;
+}
+
+body {
+    background-color: #dce0e2;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+/* 未访问的链接 */
+
+a:visited {}
+
+
+/* 已访问的链接 */
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* 鼠标移动到链接上 */
+
+a:active {}
+
+
+/* 选定的链接 */
+
+a:focus, .btn:focus {
+    outline: none;
+}
+
+
+/* 取消a标签和button按钮点击后的虚线框 */
+
+fieldset, img, abbr, table {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+
+
+/* 设置表格的边框被合并为一个单一的边框, 指定分隔边框模型中单元格边界之间的距离为0*/
+
+dl, ul, ol, menu, li {
+    list-style-type: none;
+}
+
+
+/* 重置类表前导符号为none,menu在HTML5中有效 */
+
+
+/* 清除特殊标记的字体和字号 */
+
+address, caption, cite, code, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/*全局样式结束*/

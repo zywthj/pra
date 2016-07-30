@@ -1,0 +1,92 @@
+/*
+== malihu jquery custom scrollbar plugin ==
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+*/
+
+
+
+	.mCustomScrollbar{ -ms-touch-action: pinch-zoom; touch-action: pinch-zoom; /* direct pointer events to js */ }
+	.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
+	
+	.mCustomScrollBox{ /* contains plugin's markup */
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		max-width: 100%;
+		outline: none;
+		direction: ltr;
+	}
+
+	.mCSB_container{ /* contains the original content */
+		overflow: hidden;
+		width: auto;
+		height: auto;
+	}
+
+	.mCSB_inside > .mCSB_container{ margin-right: 30px; }
+
+	.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
+		margin-right: 0;
+		margin-left: 30px;
+	}
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
+
+	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+		position: absolute;
+		width: 16px;
+		height: auto;
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
+		right: auto;
+		left: 0;
+	}
+	
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
+
+	.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0; 
+		height: auto;
+	}
+
+
+	.mCSB_scrollTools .mCSB_draggerRail{ /* 滚动条背景样式 */
+		width: 2px;
+		height: 100%;
+		margin-left: 11px;
+		border-radius: 16px;
+	}
+
+	
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* 滚动条样式 */
+		position: relative;
+		width: 8px;
+		height: 100%;
+		margin-left: 5px;
+		border-radius: 32px;
+		text-align: center;
+		cursor: pointer;
+		background-color: gray;
+	}
+	
+    .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.85); }/* 鼠标放上滚动条颜色变化 */
+	
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.25); }/* 滑动或者鼠标点击滚动条颜色变化 */
+	 
+
+	
