@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+	<link rel="Shortcut Icon" href="images/favicon.ico">
+</head>
+<body>
+	<div class="head">
+		<div class="head_right">	
+	    	<span id="openLogin">登陆</span>&nbsp;
+	    	<span id="openRegister">注册</span>    
+			<span>|</span> <a href="http://hcjp6.xyz/myResume" target="_blank">我的简历</a>
+		</div>
+	</div>
+
+	<!-- 弹出层遮罩 -->
+	<div id="form_bg"></div>
+	<!-- 登陆弹窗 -->
+	<div id="doLogin">
+	    <form>
+	        <table>
+	            <tbody>
+	                <tr>
+	                    <td align="right">用户名：</td>
+	                    <td>
+	                        <input type="text" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]+$" required minlength="5" maxlength="10" autofocus placeholder="请输入用户名" /></td>
+	                    <td class="nec">*</td>
+	                </tr>
+	                <tr>
+	                    <td align="right">密码：</td>
+	                    <td>
+	                        <input type="password" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]+$" required minlength="5" maxlength="15" placeholder="请输入密码" /></td>
+	                    <td class="nec">*</td>
+	                </tr>
+	            </tbody>
+	        </table>
+	        <input type="submit" value="登陆"/>
+	    </form>
+	    <div class="close">X</div>
+	</div>
+
+	<!-- 注册弹窗 -->
+	<div id="doReg">
+	    <form>
+	        <table>
+	            <tbody>
+	                <tr>
+	                    <td align="right">用户名：</td>
+	                    <td>
+	                        <input type="text" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]+$" required="" minlength="5" maxlength="10" autofocus placeholder="请输入用户名"/>
+	                    </td>
+	                    <td class="nec">*</td>
+	                </tr>
+	                <tr>
+	                    <td align="right">密码：</td>
+	                    <td>
+	                        <input type="password" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]+$" required minlength="5" maxlength="15" placeholder="请输入密码" /></td>
+	                    <td class="nec"">*</td>
+	                </tr>
+	                <tr>
+	                    <td align="right">确认密码：</td>
+	                    <td>
+	                        <input type="password" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]+$" required minlength="5" maxlength="15" placeholder="请确认密码" autocomplete/>
+	                    </td>
+	                    <td class="nec">*</td>
+	                </tr>
+	                <tr>
+	                    <td align="right">邮箱：</td>
+	                    <td>
+	                        <input type="email" required placeholder="请输入邮箱"/>
+	                    </td>
+	                    <td class="nec"">*</td>
+	                </tr>
+	                <tr>
+	                    <td align="right">手机号码：</td>
+	                    <td>
+	                        <input type="telephone" pattern="^\d{11}$" required minlength="11" maxlength="11"  placeholder="请输入手机号码" /></td>
+	                    <td class="nec">*</td>
+	                </tr>
+	            </tbody>
+	        </table>
+	        <input type="submit" value="注册" />
+	        <input type="reset" value="重置" /></form>
+	    <div class="close">X</div>
+	</div>
+
+	<!-- LOGO 和 百度搜索 -->
+	<div class="logo_search">
+		<div class="logo">
+			<img src="images/logo.gif">
+		</div>
+		<div class="search">
+			<input id="search_input" type="text" placeholder="百度一下，你就知道"><a class="search_icon" href="javascript:void(0)"></a>
+			<ul id="baidu_search"></ul>
+		</div>
+	</div>
+
+	<div class="nav">
+		<ul>
+			<li><a href="javascript:void(0)" title="首页" class="selected">首页</a></li>
+			<li><a href="javascript:void(0)" title="动漫">动漫</a></li>
+			<li><a href="javascript:void(0)" title="MV">MV</a></li>
+			<li><a href="javascript:void(0)" title="游戏">游戏</a></li>
+			<li><a href="javascript:void(0)" title="电影">电影</a></li>
+			<li><a href="javascript:void(0)" title="漫画">漫画</a></li>
+			<li><a href="javascript:void(0)" title="学校风采">科技</a></li>
+			<li><a href="javascript:void(0)" title="公告">公告</a></li>	
+		</ul>
+	</div>
+
+	<div class="video">
+		<div class="gradually">
+			首页 > MV > 我好像在哪见过你 
+		</div>
+		<div class="video_title">我好像在哪见过你</div>
+		<div class="video_details">
+			<div class="video_content">
+				<div class="banner">
+					<!--图片区域 开始-->
+					<div class="pic">
+						<ul>
+							<li style="display:block"><img src="images/pic1.jpg" /></li>
+							<li><img src="images/pic2.jpg" /></li>
+							<li><img src="images/pic3.jpg" /></li>
+							<li><img src="images/pic4.jpg" /></li>
+							<li><img src="images/pic5.jpg" /></li>
+						</ul>
+					</div>
+					<!--图片区域 结束-->
+
+					<!--数字按钮区域 开始-->
+					<div class="num-but">
+						<ul>
+							<li class="red">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>
+					</div>
+					<!--数字按钮区域 结束-->
+
+					<!--左右按钮 开始-->
+					<a class="but-l b" href="javascript:">&lt;</a>
+					<a class="but-r b" href="javascript:">&gt;</a>
+					<!--左右按钮 结束-->
+				</div>
+			</div>
+			<div class="video_effect">
+				<a href="javascript:void(0)" title="赞"><span></span>6666</a>
+				<a href="javascript:void(0)" title="收藏"><span></span>收藏</a>
+				<a href="javascript:void(0)" title="下载"><span></span>下载</a>
+				<a href="javascript:void(0)" title="专辑"><span></span>专辑</a>
+				<a href="javascript:void(0)" class="definition" title="清晰度">清晰度</a>
+				<a href="javascript:void(0)" title="评论"><span></span>1001</a>
+				<a href="javascript:void(0)" title="播放次数"><span></span>1523</a>
+			</div>
+
+			<!-- 清晰度遮罩层 -->
+			<div class="definition_bg">
+				<p><a href="javascript:void(0)">自适应</a></p>
+				<p><a href="javascript:void(0)">超清</a></p>
+				<p><a href="javascript:void(0)">高清</a></p>
+				<p><a href="javascript:void(0)">标清</a></p>
+			</div>
+			<div class="clear"></div>			
+		</div>
+
+		<div class="video_right">
+			<!-- 伸缩条 -->
+			<p class="show_hide">&gt;</p>
+
+			<!-- 右侧视频列表 -->
+			<div class="video_catalog">
+				<div class="video_catalog_title">
+					作者的其他视频
+				</div>
+				<div class="video_scroll scroll_content">
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+					<div class="video_list">
+						<div class="video_show">
+							<img src="images/foot_logo.png">
+							<div class="video_introduce">
+								<p>相关视频名001</p>
+								<p>2分23秒</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 右侧观后感 -->
+			<div class="saw-feel type_show">
+				<div class="save">
+					<textarea class="note_text" placeholder="可以边看边记录哦-.-!"></textarea>
+					<button class="save_button">保存</button>
+				</div>
+			</div>
+			
+			<!-- 右侧动漫简介 -->
+			<div class="knowledge_show type_show">
+				<div class="knowledge1">
+					该动漫内容丰富，寓意深刻，丝毫不亚于手撕鬼子！
+					<p>1:15</p>
+				</div>
+				<div class="knowledge2">
+					该动漫内容丰富，寓意深刻，丝毫不亚于手撕鬼子！
+					<p>2:15</p>
+				</div>
+				<div class="knowledge3">
+					该动漫内容丰富，寓意深刻，丝毫不亚于手撕鬼子！
+					<p>3:15</p>
+				</div>
+			</div>
+
+			<!-- 右侧讨论区-->
+			<div class="teach_link type_show">
+				<!-- UY BEGIN -->
+					<div id="uyan_frame"></div>
+					<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2107637"></script>
+			   <!-- UY END -->
+			</div>
+
+			<!-- 右侧预定新番 -->
+			<div class="join_activity type_show">
+				<div class="activity1">
+					1.大圣归来
+					<p><span></span>第一名 90分<span class="activity_time">20150213</span></p>
+				</div>
+				<div class="activity2">
+					2.火影忍者
+					<p><span></span>第二名 85分<span class="activity_time">20150213</span></p>
+				</div>
+				<div class="activity3">
+					3.海贼王
+					<p><span></span>正在进行中<span class="activity_time">20150213</span></p>
+				</div>
+			</div>
+
+			<!-- 右侧建议我们 -->
+			<div class="expert_comment type_show">
+				<div class="comment1">
+					张教授：该视频知识点明确，讲解清楚，条理清晰，是一个很好的学习视频。
+					<p>1:15</p>
+				</div>
+				<div class="comment2">
+					王教授：该视频知识点明确，讲解清楚，条理清晰，是一个很好的学习视频。
+					<p>1:15</p>
+				</div>
+				<div class="comment3">
+					李教授语音：
+					<p>1:15</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			
+			<!-- 最右侧选择项 -->
+			<p>
+				<div class="choose_type">
+					<div class="types">
+						<a href="javascript:void(0)" class="note_show" title=""><span class="note"></span><span class="text">观<br/>后<br/>感</span></a>
+					</div>
+					<div class="types">
+						<a href="javascript:void(0)" class="knowledge_dis" title=""><span class="knowledge"></span><span class="text">动<br/>漫<br/>简<br/>介</span></a>
+					</div>
+					<div class="types">
+						<a href="javascript:void(0)" class="teach_show" title=""><span class="teach"></span><span class="text">讨<br/>论<br/>区</span></a>
+					</div>
+					<div class="types">
+						<a href="javascript:void(0)" title="" class="activity_show"><span class="activity"></span><span class="text">预<br/>定<br/>新<br/>番<br/></span></a>
+					</div>
+					<div class="types">
+						<a href="javascript:void(0)" class="expert_show" title=""><span class="icon_type expert"></span><span class="text">建<br/>议<br/>我<br/>们</span></a>
+					</div>
+				</div>
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 关注 私信 -->
+	<div class="person_introduce">
+		<div class="person_picture">
+			<img src="images/head_icon.png" />
+			<span class="name">灰太狼</span>
+			<span class="school">来自东方的神秘力量</span>
+		</div>
+
+		<div class="follow_letter">
+			<span class="follow"></span><a href="javascript:void(0)" title="关注">关注</a>
+			<span class="letter"></span><a href="javascript:void(0)" title="私信">私信</a>
+		</div>
+	</div>
+
+	 <!-- 附件和视频简介 -->
+	 <div class="enclosure_video">
+	 	<div class="enclosure">
+	 		<span class="enclosure_icon"></span><a href="javascript:void(0)" title="">福利</a><button class="online_practice">在线直播</button>
+	 		<div class="enclosure_type">
+	 			<div class="enclosure_title">
+		 			<p>游戏频道：</p>
+		 			<p>户外直播：</p>
+		 			<p>经典电影：</p><br/><br/>
+		 			<p>其他：</p>
+		 		</div>
+		 		<div class="enclosure_content">
+		 			<p>
+		 				<span class="word"></span><a href="javascript:void(0)">英雄联盟</a><span class="word word2"></span><a href="javascript:void(0)">守望先锋</a>
+		 			</p>
+					<p>
+		 				<span class="ppt"></span><a href="javascript:void(0)">野外钓鱼</a><span class="ppt ppt2"></span><a href="javascript:void(0)">cosplay展</a>
+		 			</p>
+		 			<p>
+		 				<span class="word"></span><a href="javascript:void(0)">大话西游</a><span class="word word2"></span><a href="javascript:void(0)">十二生肖</a>
+		 			</p>
+		 			<p>
+		 				<span class="word"></span><a href="javascript:void(0)">倩女幽魂</a><span class="word word2"></span><a href="javascript:void(0)">两个世界</a>
+		 			</p>
+		 			<p>
+		 			<span class="picture"></span><a href="javascript:void(0)">相关图片</a><span class="word word3"></span><a href="javascript:void(0)">关于我们</a>
+		 			</p>
+	 			</div>
+	 		</div>
+	 		
+	 	</div>
+	 	<div class="video_intro">
+	 		<p><span class="video_intro_icon"></span>视频简介</p>
+	 		<br/>
+	 		<p>真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！真的不错哦~~！！</p>
+	 		<br/>
+	 		<p><span class="tag_icon"></span>标签</p>
+	 		<div class="tag_content">
+	 			<span>内涵</span>
+	 			<span>魅力</span>
+	 		</div>
+	 	</div>
+	</div>
+	<div class="clear"></div>
+
+	<!-- 登陆评论 -->
+	<div class="login_comment">
+		<div class="comment">
+		 	<div class="please_login">
+		 		<img src="images/head_icon.png" /><a href="javascript:void(0)">请登录</a>
+		 	</div>
+		</div>
+	    <div class="clear"></div>
+
+	    <!-- UY BEGIN -->
+		<div id="uyan_frame"></div>
+		<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2107637"></script>
+	   <!-- UY END -->
+
+	</div>
+
+	<!-- 滚动出现锚点 -->
+	<div id="top">
+		<img src="images/arrow-top.gif" width="40" height="60" />
+	</div>
+
+	<!-- 底部导航 -->
+	<div id="bottom">
+		<img src="images/foot_logo.png" />
+		<span>Copyright © 2015 河大新区资源应用平台 版权所有，All Rights Reserved</span>
+	</div>
+
+
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="libs/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/my.js"></script>
+<script>
+	$(function(){	
+		$(".scroll_content").mCustomScrollbar({
+			setWidth:false,  
+			setHeight:513, 
+			scrollbarPosition:"inside",  //滚动条在容器内部(外部设置为：outside)
+			scrollInertia:400,			 //滚动速度
+		});
+	});
+</script>
+</body>
+</html>
